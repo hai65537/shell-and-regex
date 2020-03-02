@@ -32,7 +32,7 @@
 - `[-abc]`: オプションとして`-a`，`-b`を受け付ける．
 - `[-A|-B]`: オプションとして`-A`，`-B`を受け付けるが，それぞれは排反であり，どちらか一方のみが指定できる．
 
-### `echo`
+### `echo` - write arguments to standard output
 
 #### 使い方
 
@@ -73,7 +73,7 @@
 - 0: 成功
 - \>0: エラー
 
-### `cat`
+### `cat` - concatenate and print files
 
 #### 使い方
 
