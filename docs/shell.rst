@@ -62,6 +62,7 @@ POSIXコマンド
 - `rm <shell-commands/rm.rst>`_
 - `rmdir <shell-commands/rmdir.rst>`_
 - `sed <shell-commands/sed.rst>`_
+- `test <shell-commands/test.rst>`_
 - `xargs <shell-commands/xargs.rst>`_
 
 非POSIXコマンド
@@ -178,27 +179,69 @@ POSIXコマンド
 ``if`` 文
 ~~~~~~~~~
 
+``if`` 文は条件部分にコマンドを置く．
+
+終了ステータスが0のとき真，0以外のとき偽．
+
+``then`` は改行の代わりにセミコロンで区切ることで ``if`` と同じ行に置くことができる．
+
 .. code:: shell
 
-    if false; then
-        echo "not reach"
-    elif true; then
-        echo 'True!'
+    if cond1
+    then
+        echo 'cond1 is true!'
+    elif cond2; then
+        echo 'cond2 is true!'
     else
-        echo not reach
+        echo 'both are false'
     fi
 
 ``for`` 文
 ~~~~~~~~~~
 
+例）拡張子が ``.png`` のファイルの横幅を800pxにする:
+
 .. code:: shell
 
-    for p in 2 3 5 7; do
-        echo "The number $p is prime!"
+    for f in *.png; do
+        convert "$f" -resize 800x "$f"
     done
 
 ``while`` 文
 ~~~~~~~~~~~~
 
+``if``
+
+.. code:: shell
+
+    while cond; do
+        echo 'cond is true.'
+    done
+
 ``case`` 文
 ~~~~~~~~~~~
+
+.. code:: shell
+
+    case "$var" in
+    (1)
+        # `var` が1のときにマッチ
+        echo 'one!'
+        ;; # 省略不可能
+    2)
+        # 開き括弧は必須ではない
+        echo 'two!'
+        ;;
+    3?)
+        # `var` が30台の数字のときにマッチ
+        echo 'thirty!'
+        ;;
+    *0|*5)
+        # `var` が5の倍数のときにマッチ
+        echo 'five!'
+        ;;
+    *)
+        # 残ったすべてにマッチ
+        echo 'No match!'
+        # 最後は`;;`を省略できる
+    esac
