@@ -94,7 +94,7 @@ POSIXコマンド
 
 .. code:: shell
 
-    which python &> /dev/null
+    which python &> /dev/null && echo 'Exists!'
 
 パイプ
 ~~~~~~
