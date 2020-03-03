@@ -10,13 +10,13 @@
 基本用語
 ~~~~~~~~
 
--  POSIX:
-   UNIXを始めとするオペレーティングシステムに共通のAPIを定めた標準規格．
--  標準入力 (stdin): 通常はキーボードを指す
--  標準出力 (stdout): 通常はディスプレイを指す
--  標準エラー出力 (stderr): 通常はディスプレイを指す
--  終了ステータス:
-   0から255までの整数値．0はコマンドの実行が成功したことを，それ以外は失敗したことを表す．
+-  POSIX
+        UNIXを始めとするオペレーティングシステムに共通のAPIを定めた標準規格．
+- 標準入力 (stdin): 通常はキーボードを指す
+- 標準出力 (stdout): 通常はディスプレイを指す
+- 標準エラー出力 (stderr): 通常はディスプレイを指す
+- 終了ステータス
+        0から255までの整数値．0はコマンドの実行が成功したことを，それ以外は失敗したことを表す．
 
 コマンドラインの規則
 ~~~~~~~~~~~~~~~~~~~~
@@ -34,6 +34,11 @@
 
 基本コマンド
 ------------
+
+参考サイト
+    - `<https://pubs.opengroup.org/onlinepubs/9699919799/idx/utilities.html>`_
+    - `<https://ss64.com/osx/>`_
+    - `<http://man7.org/linux/man-pages/dir_section_1.html>`_
 
 本節ではよく使われる基本的なコマンドを紹介する．なお，コマンドの実装はGNU版（Linux）とBSD版（macOS）が有名だが，それぞれに共通のオプションのうち，よく使うものだけを紹介する．中にはPOSIXに準拠していないものもあるため，使用するときは注意する必要がある．
 
@@ -63,15 +68,11 @@ POSIXコマンド
 - `wget <shell-commands/wget.rst>`_
 - `which <shell-commands/which.rst>`_
 
+シェル言語
+----------
+
 参考サイト
-^^^^^^^^^^
-
-- `<https://pubs.opengroup.org/onlinepubs/9699919799/idx/utilities.html>`_
-- `<https://ss64.com/osx/>`_
-- `<http://man7.org/linux/man-pages/dir_section_1.html>`_
-
-シェルスクリプト
-----------------
+    - `<https://pubs.opengroup.org/onlinepubs/9699919799/idx/shell.html>`_
 
 リダイレクト
 ~~~~~~~~~~~~
