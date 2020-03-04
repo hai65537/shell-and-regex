@@ -156,7 +156,7 @@ POSIXコマンド
 代入
 ^^^^
 
-変数 ``a`` に文字列 ``"Hello World"`` を代入する:
+変数 ``var`` に文字列 ``"Hello World"`` を代入する:
 
 .. code:: shell
 
