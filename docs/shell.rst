@@ -294,7 +294,7 @@ POSIXコマンド
 .. code:: shell
 
     i=1
-    while test $i -le 100; do # `i`が100以下(less than)である限り繰り返す
+    while test $i -le 100; do # `i`が100以下(less than or equals)である限り繰り返す
         if [ $(($i % 15)) -eq 0 ]; then # `[]`は`test`の別名
             echo fizzbuzz
         elif [ $((i % 3)) -eq 0 ]; then # $(()) の内側で変数を展開するときは`$`を省略してもよい
