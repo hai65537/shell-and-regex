@@ -94,7 +94,7 @@ POSIXコマンド
 
 .. code:: shell
 
-    find / -type -f 2>> error.log
+    find / -type f 2>> error.log
 
 例）実行ファイルが存在するかどうかを確認し，存在する場合，``Exists!`` を出力する．このとき，``which`` コマンドの出力は必要ないため，標準出力と標準エラー出力をまとめて ``/dev/null`` に捨てる:
 
